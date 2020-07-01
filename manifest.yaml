@@ -1,0 +1,5 @@
+---
+applications:
+  - name: Wind-Energy-Predictor
+    random-route: true
+    memory: 128M
