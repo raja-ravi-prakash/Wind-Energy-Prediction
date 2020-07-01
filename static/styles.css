@@ -1,9 +1,14 @@
 body {
   margin: 0;
   padding: 0;
-background-color: blue;
+  background-color: blue;
   background-size: cover;
   font-family: sans-serif;
+}
+
+img {
+  height: 300px;
+  width: 300px;
 }
 
 .box {
@@ -76,7 +81,6 @@ background-color: blue;
 .box input[type="submit"]:hover {
   background-color: #1cb1f5;
 }
-h1
-{
-  color:blue;
+h1 {
+  color: blue;
 }
