@@ -12,6 +12,7 @@ labels = []
 for row in data:
     row = row.split(',')
     del row[0]
+    del row[-1]
 
     out = []
     for i in row:
@@ -45,4 +46,4 @@ def model():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=port, debug=True)
+    app.run(host='localhost', port=port, debug=True)
