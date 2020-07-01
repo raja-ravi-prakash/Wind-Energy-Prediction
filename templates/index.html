@@ -3,10 +3,94 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="/static/styles.css" />
+    <script src="/static/main.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
     <title>Wind Energy Prediction</title>
-    <link rel="stylesheet" href="/static/style.css" />
   </head>
+
   <body>
-    Hello World
+    <script>
+      $("#myModal").on("shown.bs.modal", function () {
+        $("#myInput").trigger("focus");
+      });
+    </script>
+    <div class="container-fluid">
+      <div class="jumbotron bg-warning">
+        <div class="row">
+          <div class="col-3">
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player
+              src="https://assets2.lottiefiles.com/packages/lf20_5PGFBr.json"
+              background="transparent"
+              speed="1"
+              style="width: 300px; height: 300px;"
+              loop
+              autoplay
+            >
+            </lottie-player>
+          </div>
+          <div class="col-3">
+            <lottie-player
+              src="https://assets2.lottiefiles.com/packages/lf20_5PGFBr.json"
+              background="transparent"
+              speed="1"
+              style="width: 300px; height: 300px;"
+              loop
+              autoplay
+            >
+            </lottie-player>
+          </div>
+          <div class="col-3">
+            <lottie-player
+              src="https://assets2.lottiefiles.com/packages/lf20_5PGFBr.json"
+              background="transparent"
+              speed="1"
+              style="width: 300px; height: 300px;"
+              loop
+              autoplay
+            >
+            </lottie-player>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="box">
+        <h2>Test Model</h2>
+        <div class="inputBox">
+          <input
+            type="text"
+            class="input"
+            required
+            onkeyup="this.setAttribute('value', this.value);"
+            value=""
+          />
+          <label>Wind Speed (m/s)</label>
+        </div>
+        <div class="inputBox">
+          <input
+            type="text"
+            class="input"
+            required
+            value=""
+            onkeyup="this.setAttribute('value', this.value);"
+          />
+          <label>Theoretical Power Curve (KWh)</label>
+        </div>
+        <input type="submit" value="Predict" onclick="go()" />
+      </div>
+    </div>
   </body>
 </html>

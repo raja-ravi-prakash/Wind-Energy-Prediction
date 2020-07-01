@@ -1,5 +1,6 @@
 from sklearn import linear_model
 from flask import Flask, render_template, url_for, request
+from flask_cors import CORS, cross_origin
 import numpy as np
 import os
 
@@ -25,10 +26,13 @@ clf.fit(np.array(features), np.array(labels))
 
 
 app = Flask(__name__, static_folder="static")
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 port = int(os.getenv('PORT', 8000))
 
 
 @app.route('/')
+@cross_origin()
 def index():
     return render_template('index.html')
 
